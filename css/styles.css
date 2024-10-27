@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    background-color: brown;
+}
+main{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+section{
+    background-color: #b97070;
+    border: 1px solid;
+    border-radius: 15px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    align-items: center;
+}
+h1{
+    /*Google Font.  Usé la Ysabeau*/
+    font-family: "Ysabeau", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    color: azure;
+    background-color: rgb(117, 30, 30);
+    padding: 5px 10px;
+    border: 1px solid;
+    border-radius: 5px;
+    display: inline;
+    width: 40%;
+    top:-14px;
+    position: relative;/*La puse relative sino no tomaba el top negativo*/
+}
+.card {
+    position: relative;
+    width: 360px; 
+    height: 640px; 
+    overflow: hidden;/*Oculto el crash.png para mostrarlo luego en el hover*/
+}
+
+.card-image {
+    width: 360px;
+    height: 640px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 8px;
+    background-color: #eee;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 360px;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.overlay-image {
+    width: 360px; /* png crash sobreimpreso */
+    height: auto;
+}
+
+.card:hover .overlay {
+    opacity: 1; /* Muestro el overlay al hacer hover */
+}
+h4{
+    font-family: "Ysabeau", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+    font-style: normal;
+    color: azure;
+    padding: 5px 10px;
+    display: inline;
+    width: 80%;
+    position: relative;
+    margin: 12px;
+}
